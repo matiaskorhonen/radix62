@@ -21,6 +21,11 @@ Two methods are provided, Radix62#encode62 and Radix62#decode62
     Radix62.decode62("Abc123")                      #=> "33146185555"
     Radix62.decode62(Radix62.encode62(1234567890))  #=> 1234567890
 
+Radix62 also adds the `decode62` and `encode62` convenience methods to the String and Integer classes, respectively.
+
+    1000.encode62                                   #=> "g8"
+    "Abc123".decode62                               #=> "33146185555"
+
 ## License and copyright
 
 Copyright (c) 2010 Matias Korhonen
