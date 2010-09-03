@@ -3,6 +3,8 @@ Radix62
 
 Convert integers to base 62 strings and back.
 
+Base 62 includes the numbers 0-9 and characters A-Z (both lower and upper case). This can be useful for applications such as URL shorteners.
+
 ## Installation
 
 Just like any other gem:
