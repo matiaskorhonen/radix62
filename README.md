@@ -28,6 +28,10 @@ Radix62 also adds the `decode62` and `encode62` convenience methods to the Strin
     1000.encode62                                   #=> "g8"
     "Abc123".decode62                               #=> "33146185555"
 
+## Tests and compatibility
+
+The tests pass on 1.8.7, 1.9.2, Rubinius 1.0.1, and JRuby 1.5.2.
+
 ## License and copyright
 
 Copyright (c) 2010 Matias Korhonen
