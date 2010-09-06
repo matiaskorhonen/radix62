@@ -1,0 +1,315 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta name="Content-Type" content="text/html; charset=utf-8" />
+<title>Module: Radix62</title>
+<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />
+<link rel="stylesheet" href="css/common.css" type="text/css" media="screen" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  relpath = '';
+  if (relpath != '') relpath += '/';
+</script>
+<script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+  </head>
+  <body>
+    <script type="text/javascript" charset="utf-8">
+      if (window.top.frames.main) document.body.className = 'frames';
+    </script>
+    
+    <div id="header">
+      <div id="menu">
+  
+    <a href="_index.html">Index (R)</a> &raquo; 
+    
+    
+    <span class="title">Radix62</span>
+  
+  
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  <a id="class_list_link" href="#">Class List</a>
+  <a id="method_list_link" href="#">Method List</a>
+  <a id ="file_list_link" href="#">File List</a>
+</div>
+
+      <div class="clear"></div>
+    </div>
+    
+    <iframe id="search_frame"></iframe>
+    
+    <div id="content"><h1>Module: Radix62
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+  
+    
+  
+    
+  
+  
+  
+    <dt class="r1 last">Defined in:</dt>
+    <dd class="r1 last">lib/radix62.rb<span class="defines">,<br />
+  lib/radix62/version.rb</span>
+</dd>
+  
+</dl>
+<div class="clear"></div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    <p>
+Convert integers to base 62 strings and back.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div>
+  <h2>Constant Summary</h2>
+  
+    <dl class="constants">
+      
+        <dt id="ALPHABET-constant" class="">ALPHABET =
+          
+        </dt>
+        <dd><pre class="code"><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>0</span><span class='tstring_end'>'</span></span><span class='op'>..</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>9</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id to_a'>to_a</span> <span class='op'>+</span> <span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>a</span><span class='tstring_end'>'</span></span><span class='op'>..</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>z</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id to_a'>to_a</span> <span class='op'>+</span> <span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>A</span><span class='tstring_end'>'</span></span><span class='op'>..</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Z</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id to_a'>to_a</span></pre></dd>
+      
+        <dt id="VERSION-constant" class="">VERSION =
+          
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>0.1.0</span><span class='tstring_end'>&quot;</span></span></pre></dd>
+      
+    </dl>
+  
+
+
+
+  
+    <h2>
+      Class Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#decode62-class_method" title="decode62 (class method)">+ (Object) <strong>decode62</strong>(string) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Decode a base 62 String to a base 10 Integer.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#encode62-class_method" title="encode62 (class method)">+ (Object) <strong>encode62</strong>(number) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Encode an Integer to a base 62 string.
+</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+    
+    
+      <div class="method_details first">
+  <p class="signature first" id="decode62-class_method">
+  
+    + (<tt>Object</tt>) <strong>decode62</strong>(string) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Decode a base 62 String to a base 10 Integer. The input value  <b>must
+not</b> contain illegal characters.
+</p>
+<p>
+If the input is not alphanumeric, an ArgumentError will be raised.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/radix62.rb', line 39</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id decode62'>decode62</span><span class='lparen'>(</span><span class='id string'>string</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='op'>!</span><span class='op'>!</span><span class='id string'>string</span><span class='period'>.</span><span class='id match'>match</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^([a-z0-9]+)$</span><span class='regexp_end'>/i</span></span><span class='rparen'>)</span>
+    <span class='id integer'>integer</span> <span class='op'>=</span> <span class='int'>0</span>
+    <span class='id string'>string</span><span class='period'>.</span><span class='id split'>split</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='regexp_end'>/</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id reverse'>reverse</span><span class='period'>.</span><span class='id each_with_index'>each_with_index</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id char'>char</span><span class='comma'>,</span><span class='id index'>index</span><span class='op'>|</span>
+      <span class='id place'>place</span> <span class='op'>=</span> <span class='const'>ALPHABET</span><span class='period'>.</span><span class='id size'>size</span> <span class='op'>**</span> <span class='id index'>index</span>
+      <span class='id integer'>integer</span> <span class='op'>+=</span> <span class='const'>ALPHABET</span><span class='period'>.</span><span class='id find_index'>find_index</span><span class='lparen'>(</span><span class='id char'>char</span><span class='rparen'>)</span> <span class='op'>*</span> <span class='id place'>place</span>
+    <span class='kw'>end</span>
+    <span class='id integer'>integer</span>
+  <span class='kw'>else</span>
+    <span class='id raise'>raise</span> <span class='const'>ArgumentError</span><span class='period'>.</span><span class='id new'>new</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Input is not alphanumeric.</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="encode62-class_method">
+  
+    + (<tt>Object</tt>) <strong>encode62</strong>(number) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Encode an Integer to a base 62 string. The input value <b>must</b> be a
+positive  integer.
+</p>
+<p>
+If the input number is not an Integer, a TypeError will be raised and if
+the input number is negative, a RangeError will be raised.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/radix62.rb', line 14</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id encode62'>encode62</span><span class='lparen'>(</span><span class='id number'>number</span><span class='rparen'>)</span>
+  <span class='kw'>unless</span> <span class='id number'>number</span><span class='period'>.</span><span class='id is_a?'>is_a?</span> <span class='const'>Integer</span>
+    <span class='id raise'>raise</span> <span class='const'>TypeError</span><span class='period'>.</span><span class='id new'>new</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>number not an integer</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>end</span>
+  
+  <span class='kw'>if</span> <span class='id number'>number</span> <span class='op'>&lt;</span> <span class='int'>0</span>
+    <span class='id raise'>raise</span> <span class='const'>RangeError</span><span class='period'>.</span><span class='id new'>new</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>number must be greater than or equal to 0</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>elsif</span> <span class='id number'>number</span> <span class='op'>==</span> <span class='int'>0</span>
+    <span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>0</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>end</span>
+
+  <span class='id base62'>base62</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span>
+    
+  <span class='kw'>while</span> <span class='id number'>number</span> <span class='op'>&gt;</span> <span class='int'>0</span>
+    <span class='id base62'>base62</span> <span class='op'>&lt;&lt;</span> <span class='const'>ALPHABET</span><span class='lbracket'>[</span><span class='id number'>number</span><span class='period'>.</span><span class='id modulo'>modulo</span><span class='lparen'>(</span><span class='int'>62</span><span class='rparen'>)</span><span class='rbracket'>]</span>
+    <span class='id number'>number</span> <span class='op'>/=</span> <span class='int'>62</span>
+  <span class='kw'>end</span>
+  
+  <span class='id base62'>base62</span><span class='period'>.</span><span class='id reverse'>reverse</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+    
+    <div id="footer">
+  Generated on Mon Sep  6 19:40:01 2010 by 
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.6.0 (ruby-1.9.2).
+</div>
+
+  </body>
+</html>
