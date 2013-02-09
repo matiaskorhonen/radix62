@@ -34,6 +34,6 @@ The tests pass on 1.8.7, 1.9.2, Rubinius 1.0.1, and JRuby 1.5.2/1.6.0.
 
 ## License and copyright
 
-Copyright (c) 2010 Matias Korhonen
+Copyright © 2010-2012 Matias Korhonen
 
 Licensed under the MIT license, see the LICENSE file for details.
