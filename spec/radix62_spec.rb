@@ -1,5 +1,6 @@
 # -*- encoding: utf-8 -*-
 require "spec_helper"
+require "support/known_good"
 
 describe Radix62 do
   context "alphabet" do
