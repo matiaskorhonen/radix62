@@ -5,6 +5,15 @@ require "radix62/core_ext/integer"
 # Convert integers to base 62 strings and back.
 module Radix62
   ALPHABET = ('0'..'9').to_a + ('a'..'z').to_a + ('A'..'Z').to_a
+  ALPHABET_HASH = {}
+  ALPHABET.each_with_index { |v,k| ALPHABET_HASH[v] = k }
+
+  KeyError = begin
+    KeyError
+  rescue NameError
+    IndexError
+  end
+  
   
   # Encode an Integer to a base 62 string. The input value *must* be a positive 
   # integer.
@@ -15,36 +24,34 @@ module Radix62
     unless number.is_a? Integer
       raise TypeError.new "number not an integer"
     end
-    
-    if number < 0
-      raise RangeError.new "number must be greater than or equal to 0"
+  
+    if number > 0
+      base62 = ""
+      while number > 0
+        base62 << ALPHABET[number % 62]
+        number /= 62
+      end
+      base62.reverse
     elsif number == 0
-      return "0"
+      "0"
+    else
+      raise RangeError.new "number must be greater than or equal to 0"
     end
-
-    base62 = ""
-      
-    while number > 0
-      base62 << ALPHABET[number.modulo(62)]
-      number /= 62
-    end
-    
-    base62.reverse
   end
+
   
   # Decode a base 62 String to a base 10 Integer. The input value 
   # <b>must not</b> contain illegal characters.
   # 
   # If the input is not alphanumeric, an ArgumentError will be raised.
   def self.decode62(string)
-    if !!string.match(/^([a-z0-9]+)$/i)
+    begin
       integer = 0
-      string.split(//).reverse.each_with_index do |char,index|
-        place = ALPHABET.size ** index
-        integer += ALPHABET.find_index(char) * place
+      string.split(//).each do |char|
+        integer = integer * 62 + ALPHABET_HASH.fetch(char)
       end
       integer
-    else
+    rescue KeyError
       raise ArgumentError.new "Input is not alphanumeric."
     end
   end
