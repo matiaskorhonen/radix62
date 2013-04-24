@@ -7,6 +7,13 @@ module Radix62
   ALPHABET = ('0'..'9').to_a + ('a'..'z').to_a + ('A'..'Z').to_a
   ALPHABET_HASH = {}
   ALPHABET.each_with_index { |v,k| ALPHABET_HASH[v] = k }
+
+  KeyError = begin
+    KeyError
+  rescue NameError
+    IndexError
+  end
+  
   
   # Encode an Integer to a base 62 string. The input value *must* be a positive 
   # integer.
