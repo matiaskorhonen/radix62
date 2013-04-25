@@ -30,7 +30,9 @@ Radix62 also adds the `decode62` and `encode62` convenience methods to the Strin
 
 ## Tests and compatibility
 
-The tests pass on 1.8.7, 1.9.3, Rubinius 1.0.1, and JRuby 1.5.2/1.6.0.
+[![Build Status](https://travis-ci.org/k33l0r/radix62.png)](https://travis-ci.org/k33l0r/radix62) [![Code Climate](https://codeclimate.com/github/k33l0r/radix62.png)](https://codeclimate.com/github/k33l0r/radix62)
+
+The gem is tested against MRI 1.8/1.9/2.0, JRuby, and Rubinius. See [Travis CI](https://travis-ci.org/k33l0r/radix62) for details.
 
 ## License
 
