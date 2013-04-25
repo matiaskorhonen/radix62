@@ -32,8 +32,6 @@ Radix62 also adds the `decode62` and `encode62` convenience methods to the Strin
 
 The tests pass on 1.8.7, 1.9.3, Rubinius 1.0.1, and JRuby 1.5.2/1.6.0.
 
-## License and copyright
-
-Copyright © 2010-2012 Matias Korhonen
+## License
 
 Licensed under the MIT license, see the LICENSE file for details.
