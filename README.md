@@ -32,7 +32,7 @@ Radix62 also adds the `decode62` and `encode62` convenience methods to the Strin
 
 [![Build Status](https://travis-ci.org/k33l0r/radix62.png)](https://travis-ci.org/k33l0r/radix62) [![Code Climate](https://codeclimate.com/github/k33l0r/radix62.png)](https://codeclimate.com/github/k33l0r/radix62)
 
-The gem is tested against MRI 1.8/1.9/2.0, JRuby, and Rubinius. See [Travis CI](https://travis-ci.org/k33l0r/radix62) for details.
+The gem is tested against MRI 1.8/1.9/2.0/2.1, JRuby, and Rubinius. See [Travis CI](https://travis-ci.org/k33l0r/radix62) for details.
 
 ## License
 
